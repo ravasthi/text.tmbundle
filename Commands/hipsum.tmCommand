@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env rvm-auto-ruby -w
+
+require 'json'
+require 'net/http'
+require 'uri'
+
+uri = URI.parse('http://hipsterjesus.com/api/')
+params = { paras: 1, html: false }
+
+uri.query = URI.encode_www_form( params )
+
+response = JSON.parse(Net::HTTP.get(uri))
+
+puts response['text']
+</string>
+	<key>name</key>
+	<string>hipsum</string>
+	<key>tabTrigger</key>
+	<string>hipsum</string>
+	<key>uuid</key>
+	<string>E06CEF23-F691-4E21-9396-0008DA8EFF2A</string>
+</dict>
+</plist>
