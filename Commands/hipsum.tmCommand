@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env rvm-auto-ruby -w
 
@@ -18,11 +20,23 @@ response = JSON.parse(Net::HTTP.get(uri))
 
 puts response['text']
 </string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>name</key>
 	<string>hipsum</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
 	<key>tabTrigger</key>
 	<string>hipsum</string>
 	<key>uuid</key>
 	<string>E06CEF23-F691-4E21-9396-0008DA8EFF2A</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
