@@ -18,7 +18,7 @@ uri.query = URI.encode_www_form( params )
 
 response = JSON.parse(Net::HTTP.get(uri))
 
-puts response['text']
+puts response['text'].gsub(/\s+/, ' ')
 </string>
 	<key>input</key>
 	<string>selection</string>
